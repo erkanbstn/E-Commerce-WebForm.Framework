@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminSayfa.master.cs" Inherits="AlisVerisSitesi.AdminSayfa" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>EShopper</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <link href="EShopper/img/favicon.ico" rel="icon">
+    <link rel="EShopper/preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="EShopper/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="EShopper/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="row align-items-center py-3 px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mb-5">
+        <div class="row border-top px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
+                    <h6 class="m-0">Yönetim</h6>
+                    <i class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
+                    <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
+                        <a href="AnaAdmin.aspx" class="nav-item nav-link">Kategoriler</a>
+                        <a href="AdminUrunler.aspx" class="nav-item nav-link">Ürünler</a>
+                        <a href="AdminKullanicilar.aspx" class="nav-item nav-link">Kullanıcılar</a>
+                        <a href="AdminMesajlar.aspx" class="nav-item nav-link">Mesajlar</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="EShopper/lib/easing/easing.min.js"></script>
+    <script src="EShopper/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="EShopper/mail/jqBootstrapValidation.min.js"></script>
+    <script src="EShopper/mail/contact.js"></script>
+    <script src="EShopper/js/main.js"></script>
+
+</body>
+
+</html>

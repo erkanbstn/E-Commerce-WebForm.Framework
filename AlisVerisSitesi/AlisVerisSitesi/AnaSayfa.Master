@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AnaSayfa.master.cs" Inherits="AlisVerisSitesi.AnaSayfa" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EShopper</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <link href="EShopper/img/favicon.ico" rel="icon">
+    <link rel="EShopper/preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="EShopper/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="EShopper/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <form runat="server" method="post">
+        <div class="container-fluid">
+
+            <div class="row align-items-center py-3 px-xl-5">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+                </div>
+                <div class="col-lg-6 col-6 text-left">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Arama">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-transparent text-primary">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 text-right">
+                    <a href="Profilim.aspx" class="btn border">
+                       Profilim <i class="fas fa-address-card text-primary"></i>
+                    </a>
+                    <a href="Sepetim.aspx" class="btn border">
+                       Sepetim <i class="fas fa-shopping-cart text-primary"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 ">
+            <a href="" class="text-decoration-none d-block d-lg-none">
+                <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="Ana.aspx" class="nav-item nav-link">Ana Sayfa</a>
+                    <a href="Urunler.aspx" class="nav-item nav-link">Ürünler</a>
+                    <a href="Iletisim.aspx" class="nav-item nav-link">Iletisim</a>
+                </div>
+                <div class="navbar-nav ml-auto py-0">
+                    <asp:Button ID="BtnGiris" runat="server" class="nav-item nav-link" Text="Giriş Yap" OnClick="BtnGiris_Click" />
+                    <asp:Button ID="BtnKayit" runat="server" class="nav-item nav-link" Text="Kaydol" OnClick="BtnKayit_Click" />
+                </div>
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+        <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
+            <div class="row px-xl-5 pt-5">
+                <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                    <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>Shopper</h1>
+                    <p>Alışveriş Sitesi</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
+                </div>
+                <div class="col-lg-8 col-md-12">
+                    <div class="row">
+                        <div class="col-md-4 mb-5">
+                            <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-dark mb-2" href="Ana.aspx"><i class="fa fa-angle-right mr-2"></i>Ana Sayfa</a>
+                                <a class="text-dark mb-2" href="Urunler.aspx?ID=0"><i class="fa fa-angle-right mr-2"></i>Ürünler</a>
+                                <a class="text-dark mb-2" href="Iletisim.aspx"><i class="fa fa-angle-right mr-2"></i>İletişim</a>
+                                <a class="text-dark mb-2" href="Sepetim.aspx"><i class="fa fa-angle-right mr-2"></i>Sepetim</a>
+                                <a class="text-dark mb-2" href="Profilim.aspx"><i class="fa fa-angle-right mr-2"></i>Profilim</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5">
+                            <h5 class="font-weight-bold text-dark mb-4">Bize Ulaşın</h5>
+                            <div class="form-group">
+                                <asp:TextBox ID="TxtEmail" class="form-control border-0 py-4" runat="server" placeholder="Email"></asp:TextBox>
+                                <br />
+                                <asp:TextBox ID="TxtMesaj" class="form-control border-0 py-4" runat="server" placeholder="Mesaj"></asp:TextBox>
+                            </div>
+                            <div>
+                                <asp:Button ID="Button1" runat="server" class="btn btn-primary btn-block border-0 py-3" Text="Mesaj Gönder" OnClick="Button1_Click" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="EShopper/lib/easing/easing.min.js"></script>
+        <script src="EShopper/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="EShopper/mail/jqBootstrapValidation.min.js"></script>
+        <script src="EShopper/mail/contact.js"></script>
+        <script src="EShopper/js/main.js"></script>
+    </form>
+</body>
+
+</html>
